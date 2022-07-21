@@ -1,7 +1,8 @@
 import Header from './Components/Header';
 import Carousel from './Components/Carousel';
-import Card from './Components/Card';
-import Contoh from './Components/contoh';
+import Kart from './Components/Card';
+import Footer from './Components/Footer';
+
 
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
     <br></br>
     <Carousel/>
     <br></br>
-    <Card/>
-    <br></br>
-    <Contoh/>
+    <Kart/>
+    <Kart/>
+    <Footer/>
+
     </> 
   );
 }
