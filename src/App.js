@@ -4,7 +4,6 @@ import Kart from './Components/Card';
 import Footer from './Components/Footer';
 
 
-
 function App() {
   return (
     <>
@@ -13,9 +12,8 @@ function App() {
     <Carousel/>
     <br></br>
     <Kart/>
-    <Kart/>
+    <br></br>
     <Footer/>
-
     </> 
   );
 }
