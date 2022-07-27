@@ -6,6 +6,8 @@ import "./style.css";
 function Kart() {
   return (
     <>
+    <div className='container-fluid'>
+      <div className='container'>
     <div className="berita">
       Tulang Bawang Info
     </div>
@@ -144,8 +146,8 @@ function Kart() {
           </Card>
     </Col>
     </Row>
-
-    
+    </div>
+    </div>
     </>
   );
 }

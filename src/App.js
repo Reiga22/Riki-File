@@ -1,18 +1,14 @@
-import Header from './Components/Header';
-import Carousel from './Components/Carousel';
-import Kart from './Components/Card';
-import Footer from './Components/Footer';
-
-
+import {Routes, Route} from "react-router-dom";
+import Profil from './Profil';
+import Beranda from "./Beranda";
 
 function App() {
   return (
     <>
-    <Header/>
-    <Carousel/>
-    <br></br>
-    <Kart/>
-    <Footer/>
+    <Routes>
+      <Route path="/" element={<Beranda/>} />
+      <Route path="/Profil" element={<Profil/>} />
+    </Routes>
     </> 
   );
 }
