@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+
 import "./style.css";
 
 function Kart() {
@@ -11,8 +12,11 @@ function Kart() {
     <>
     <div className='container-fluid py-5'>
       <div className='container'>
-        <div className='blockquote mb-2'>Info Terbaru</div>
         <div className='row'>
+          <img src="https://lintasdinamika.com/wp-content/uploads/2019/01/Bupati-dan-Wakil-Bupati-Tulang-Bawang.jpg"/>
+        </div>
+        <div className='row'>
+        <div className='mt-5'>Info Terbaru</div>
         <Col sm={7}><Card>
         <Card.Img variant="top" src="https://i0.wp.com/rimbakita.com/wp-content/uploads/2020/07/baju-tulang-bawang.jpg" />
         <Card.Body>
@@ -21,8 +25,23 @@ function Kart() {
             bulk of the card's content.
           </Card.Text>
         </Card.Body>
-      </Card></Col>
+      </Card>
+      <br></br>
+      <Card>
+        <Card.Img variant="top" src="https://i0.wp.com/rimbakita.com/wp-content/uploads/2020/07/baju-tulang-bawang.jpg" />
+        <Card.Body>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      </Col>
+      
       <Col>
+      <div>
+        Image
+      </div>
       <Card>
             <Card.Img variant="top" src="https://radarlombok.co.id/wp-content/uploads/2022/05/1651386148297.jpg" />
             <Card.Body>
@@ -59,7 +78,7 @@ function Kart() {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col className='mt-4'>
         <Card>
             <Card.Img variant="top" src="https://radarlombok.co.id/wp-content/uploads/2022/05/1651386148297.jpg" />
             <Card.Body>
@@ -129,7 +148,9 @@ function Kart() {
         <Form.Label>Text</Form.Label>
         <Form.Control as="textarea" rows={3} />
       </Form.Group>
-    </Form></Col>
+    </Form>
+    <Button variant="kirim">Kirim</Button>
+    </Col>
         </div>
       </div>
        
@@ -137,6 +158,6 @@ function Kart() {
         
     </>
   );
-}
+};
 
 export default Kart;
