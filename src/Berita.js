@@ -1,8 +1,9 @@
-import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-const Profil = () => {
+
+const Berita = () => {
     return (
         <>
         <Header/>
@@ -10,7 +11,7 @@ const Profil = () => {
         <div className="row">
         <Col>
           <Card>
-            <Card.Img variant="top" src="https://www.seekpng.com/png/detail/202-2024994_profile-icon-profile-logo-no-background.png" />
+            <Card.Img variant="top" src="https://geracicon.com/wp-content/uploads/2019/09/FILLER-no-headshot.png" />
             <Card.Body>
               <Card.Title>Card title</Card.Title>
               <Card.Text>
@@ -21,7 +22,7 @@ const Profil = () => {
             </Card.Body>
           </Card>
           <Card>
-            <Card.Img variant="top" src="https://www.seekpng.com/png/detail/202-2024994_profile-icon-profile-logo-no-background.png" />
+            <Card.Img variant="top" src="https://geracicon.com/wp-content/uploads/2019/09/FILLER-no-headshot.png" />
             <Card.Body>
               <Card.Title>Card title</Card.Title>
               <Card.Text>
@@ -34,7 +35,7 @@ const Profil = () => {
         </Col>
         <Col>
         <Card>
-            <Card.Img variant="top" src="https://www.seekpng.com/png/detail/202-2024994_profile-icon-profile-logo-no-background.png" />
+            <Card.Img variant="top" src="https://geracicon.com/wp-content/uploads/2019/09/FILLER-no-headshot.png" />
             <Card.Body>
               <Card.Title>Card title</Card.Title>
               <Card.Text>
@@ -45,7 +46,7 @@ const Profil = () => {
             </Card.Body>
           </Card>
           <Card>
-            <Card.Img variant="top" src="https://www.seekpng.com/png/detail/202-2024994_profile-icon-profile-logo-no-background.png" />
+            <Card.Img variant="top" src="https://geracicon.com/wp-content/uploads/2019/09/FILLER-no-headshot.png" />
             <Card.Body>
               <Card.Title>Card title</Card.Title>
               <Card.Text>
@@ -58,7 +59,7 @@ const Profil = () => {
         </Col>
             <Col>
             <Card>
-            <Card.Img variant="top" src="https://www.seekpng.com/png/detail/202-2024994_profile-icon-profile-logo-no-background.png" />
+            <Card.Img variant="top" src="https://geracicon.com/wp-content/uploads/2019/09/FILLER-no-headshot.png" />
             <Card.Body>
               <Card.Title>Card title</Card.Title>
               <Card.Text>
@@ -69,7 +70,7 @@ const Profil = () => {
             </Card.Body>
           </Card>
           <Card>
-            <Card.Img variant="top" src="https://www.seekpng.com/png/detail/202-2024994_profile-icon-profile-logo-no-background.png" />
+            <Card.Img variant="top" src="https://geracicon.com/wp-content/uploads/2019/09/FILLER-no-headshot.png" />
             <Card.Body>
               <Card.Title>Card title</Card.Title>
               <Card.Text>
@@ -80,10 +81,9 @@ const Profil = () => {
             </Card.Body>
           </Card></Col>
         </div>
-        <br></br>
         <Footer/>
         </>
     );
 };
 
-export default Profil;
+export default Berita;

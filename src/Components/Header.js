@@ -19,6 +19,7 @@ function Header() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Beranda</Nav.Link>
             <Nav.Link as={Link} to="/Profil">Profil</Nav.Link>
+            <Nav.Link as={Link} to="/Berita">Berita</Nav.Link>
             <Nav.Link href="#artikel">Artikel</Nav.Link>
           </Nav>
         </Container>
