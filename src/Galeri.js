@@ -5,7 +5,7 @@ const Galeri = () => {
     return (
         <>
         <Header/>
-        <p>LENOVO LEGION 5</p>
+        
         <Footer/>
         </>
     );

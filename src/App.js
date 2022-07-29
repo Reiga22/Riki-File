@@ -5,6 +5,7 @@ import Berita from "./Berita";
 import Artikel from "./Artikel";
 import Galeri from "./Galeri";
 import Foto from "./Foto";
+import Vidio from "./Vidio";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Route path="/Artikel" element={<Artikel/>}/>
       <Route path="/Galeri" element={<Galeri/>}/>
       <Route path="/Foto" element={<Foto/>}/>
+      <Route path="/Vidio" element={<Vidio/>}/>
+
 
     </Routes>
     </> 
