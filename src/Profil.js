@@ -1,5 +1,6 @@
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import React from "react";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 const Profil = () => {

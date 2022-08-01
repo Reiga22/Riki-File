@@ -1,124 +1,66 @@
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
+import "./Components/style.css";
+import React from "react";
+import {Card, Button} from "react-bootstrap";
+import {useState, useEffect} from "react";
 
-const Berita = () => {
+function Berita() {
+  const [DataResponse, setDataResponse] = useState(null);
+
+  useEffect(() => {
+    Berita();
+    return () => {
+      setDataResponse(null);
+    };
+  }, []);
+
+  function Berita() {
+    const axios = require('axios');
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=7&per_page=8').then(function (response) {
+    setDataResponse(response.data.data.data);
+    }).catch(function (error) {
+
+    }).then(function () {
+
+    });
+  }
+
     return (
-        <>
-        <Header/>
-        <div className="container-fluid py-5">
-          <div className="container">
-        <div className="row">
-        <Col>
-        <Card>
-            <Card.Img variant="top" src="https://radarlombok.co.id/wp-content/uploads/2022/05/1651386148297.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
+    <>
+    <Header/>
+      {
+        (DataResponse != null) ? 
+         
+              <div className="row">
+        {
+          DataResponse && DataResponse.map((item, index) => {
+            return (
+              
+              
+              <div className="col-lg-3 col-md-6">
+                  <Card className="card-berita" style={{ width: '18rem' }}>
+                    <Card.Img className="img-berita"
+                    variant="top"
+                    src={item.image_file_data}
+                    />
+                  <Card.Body>
+              <Card.Title>{item.title}</Card.Title>
+              <Card.Text>{item.content}</Card.Text>
+              <Button variant="success">Go Somewhere</Button>
             </Card.Body>
-          </Card>
-          <br></br>
-          <Card>
-            <Card.Img variant="top" src="https://radarlombok.co.id/wp-content/uploads/2022/05/1651386148297.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-          <br></br>
-          <Col>
-          <Card>
-            <Card.Img variant="top" src="https://radarlombok.co.id/wp-content/uploads/2022/05/1651386148297.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <br></br>
-          <Card>
-            <Card.Img variant="top" src="https://radarlombok.co.id/wp-content/uploads/2022/05/1651386148297.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-          <br></br>
-          <Col>
-          <Card>
-            <Card.Img variant="top" src="https://radarlombok.co.id/wp-content/uploads/2022/05/1651386148297.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <br></br>
-          <Card>
-            <Card.Img variant="top" src="https://radarlombok.co.id/wp-content/uploads/2022/05/1651386148297.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-          <br></br>
-          <Col>
-          <Card>
-            <Card.Img variant="top" src="https://radarlombok.co.id/wp-content/uploads/2022/05/1651386148297.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <br></br>
-          <Card>
-            <Card.Img variant="top" src="https://radarlombok.co.id/wp-content/uploads/2022/05/1651386148297.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-        </div>
-        </div>
-        </div>
-        <Footer/>
-        </>
-    );
-};
+                
+                  </Card>
+              </div>
+            )
+          })
+        }
+        </div>: ''
+      }
+      <Footer/>
+      </>
+  );
+  
+}
 
 export default Berita;
