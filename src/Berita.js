@@ -37,21 +37,18 @@ function Berita() {
           DataResponse && DataResponse.map((item, index) => {
             return (
               
-              
-              <div className="col-lg-3 col-md-6">
-                  <Card className="card-berita" style={{ width: '18rem' }}>
-                    <Card.Img className="img-berita"
-                    variant="top"
-                    src={item.image_file_data}
-                    />
-                  <Card.Body>
-              <Card.Title>{item.title}</Card.Title>
-              <Card.Text>{item.content}</Card.Text>
-              <Button variant="success">Go Somewhere</Button>
-            </Card.Body>
-                
-                  </Card>
-              </div>
+              <div className='col-lg-3 col-md-6 col-sm-12'>
+                            <Card className='mt-4'>
+                                <Card.Img variant="top" src={item.image_file_data} />
+                                <Card.Body>
+                                <Card.Title>{item.title}</Card.Title>
+                                <Card.Text>
+                                        {item.content}
+                                </Card.Text>
+                                <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                </Card.Body>
+                            </Card>
+                        </div>
             )
           })
         }

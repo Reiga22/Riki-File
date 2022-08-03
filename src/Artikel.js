@@ -1,124 +1,63 @@
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
+import "./Components/style.css";
+import React from "react";
+import {Card, Button} from "react-bootstrap";
+import {useState, useEffect} from "react";
 
-const Artikel = () => {
+function Artikel() {
+  const [DataResponse, setDataResponse] = useState(null);
+
+  useEffect(() => {
+    Artikel();
+    return () => {
+      setDataResponse(null);
+    };
+  }, []);
+
+  function Artikel() {
+    const axios = require('axios');
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=9&per_page=8').then(function (response) {
+    setDataResponse(response.data.data.data);
+    }).catch(function (error) {
+
+    }).then(function () {
+
+    });
+  }
+
     return (
-        <>
-        <Header/>
-        <div className="container-fluid py-5">
-            <div className="container">
-                <div className="row">
-                <Col>
-        <Card>
-            <Card.Img variant="top" src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/02/16/1157973079.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <br></br>
-          <Card>
-            <Card.Img variant="top" src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/02/16/1157973079.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-          <br></br>
-          <Col>
-          <Card>
-            <Card.Img variant="top" src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/02/16/1157973079.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <br></br>
-          <Card>
-            <Card.Img variant="top" src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/02/16/1157973079.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-          <br></br>
-          <Col>
-          <Card>
-            <Card.Img variant="top" src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/02/16/1157973079.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <br></br>
-          <Card>
-            <Card.Img variant="top" src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/02/16/1157973079.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-          <br></br>
-          <Col>
-          <Card>
-            <Card.Img variant="top" src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/02/16/1157973079.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <br></br>
-          <Card>
-            <Card.Img variant="top" src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/02/16/1157973079.jpg" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          </Col>
-            </div>
-        </div>
-        </div>
-        <Footer/>
-        </>
-    );
-};
+    <>
+    <Header/>
+      {
+        (DataResponse != null) ? 
+         
+              <div className="row">
+        {
+          DataResponse && DataResponse.map((item, index) => {
+            return (
+              
+              <div className='col-lg-3 col-md-6 col-sm-12'>
+                            <Card className='mt-4'>
+                                <Card.Img variant="top" src={item.image_file_data} />
+                                <Card.Body>
+                                <Card.Title>{item.title}</Card.Title>
+                                <Card.Text>
+                                        {item.content}
+                                </Card.Text>
+                                <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                </Card.Body>
+                            </Card>
+                        </div>
+            )
+          })
+        }
+        </div>: ''
+      }
+      <Footer/>
+      </>
+  );
+  
+}
 
 export default Artikel;

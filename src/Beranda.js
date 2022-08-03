@@ -1,14 +1,14 @@
 import Header from './Components/Header';
 import Carousel from './Components/Carousel';
-import Kart from './Components/Card';
 import Footer from './Components/Footer';
-
+import Kart from './Components/Card';
+import Gambarketua from './Components/Gambarketua';
 function Beranda() {
   return (
     <>
     <Header/>
     <Carousel/>
-    <br></br>
+    <Gambarketua/>
     <Kart/>
     <Footer/>
 
