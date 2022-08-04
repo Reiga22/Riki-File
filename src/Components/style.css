@@ -15,11 +15,7 @@
     font-family: monospace;
 }
 
-.card-berita{
-    box-shadow: 0 10px 8px 0 ;
-    transition: 0.3s;
-    border-radius: 5px 5px;
-}
+
 
 .img-berita{
     border-radius: 30px 30px 15px 15px;
@@ -29,3 +25,4 @@
     width: 300px;
     height: 300px;
 }
+

@@ -17,7 +17,7 @@ function Berita() {
 
   function Berita() {
     const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=7&per_page=8').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=7&per_page=20').then(function (response) {
     setDataResponse(response.data.data.data);
     }).catch(function (error) {
 
@@ -38,6 +38,7 @@ function Berita() {
             return (
               
               <div className='col-lg-3 col-md-6 col-sm-12'>
+                <Card className="card-beranda">
                             <Card className='mt-4'>
                                 <Card.Img variant="top" src={item.image_file_data} />
                                 <Card.Body>
@@ -45,8 +46,11 @@ function Berita() {
                                 <Card.Text>
                                         {item.content}
                                 </Card.Text>
-                                <Button variant="outline-success">Baca Selengkapnya..</Button>{' '}
+                                <p className='read-more'>
+                                  <a href=''>Read More</a>
+                                </p>                                
                                 </Card.Body>
+                            </Card>
                             </Card>
                         </div>
             )

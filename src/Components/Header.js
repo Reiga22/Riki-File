@@ -11,12 +11,14 @@ function Header() {
         <Container>
         <Navbar.Brand>
           <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png" width={70} height={60}></img>
+          <text className="ps-2">LAMPUNG TIMUR</text>
         </Navbar.Brand>
         </Container>
       </Navbar>
      <Navbar bg="dark" variant="dark">
         <Container>
           <Nav className="me-auto">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Nav.Link as={Link} to="/">Beranda</Nav.Link>
             <Nav.Link as={Link} to="/Berita">Berita</Nav.Link>
             <Nav.Link as={Link} to="/Artikel">Artikel</Nav.Link>

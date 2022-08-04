@@ -8,7 +8,11 @@ const Vidio = () => {
     return (
         <>
         <Header/>
-        <p>PPPPPPPPPPPPPPPPPPPPP</p>
+        <div>
+            <p>
+                <h1>MASIH KOSONG BOS</h1>
+            </p>
+        </div>
         <Footer/>
         </>
     );

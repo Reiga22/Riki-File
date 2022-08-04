@@ -46,6 +46,7 @@ function Kart() {
           && DataResponse.map((item, index) => {
             return (
                         <div className='col-lg-3 col-md-6 col-sm-12'>
+                          <Card className='card-beranda' >
                             <Card className='mt-4'>
                                 <Card.Img variant="top" src={item.image_file_data} />
                                 <Card.Body>
@@ -53,8 +54,11 @@ function Kart() {
                                 <Card.Text>
                                         {item.content}
                                 </Card.Text>
-                                <Button variant="outline-success">BACA</Button>{' '}
+                                <p className='read-more'>
+                                  <a href=''>Read More</a>
+                                </p>
                                 </Card.Body>
+                            </Card>
                             </Card>
                         </div>
             )
