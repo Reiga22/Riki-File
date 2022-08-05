@@ -37,8 +37,7 @@ function Berita() {
           DataResponse && DataResponse.map((item, index) => {
             return (
               
-              <div className='col-lg-3 col-md-6 col-sm-12'>
-                <Card className="card-beranda">
+                <Card className="card-artikel-berita">
                             <Card className='mt-4'>
                                 <Card.Img variant="top" src={item.image_file_data} />
                                 <Card.Body>
@@ -52,7 +51,6 @@ function Berita() {
                                 </Card.Body>
                             </Card>
                             </Card>
-                        </div>
             )
           })
         }

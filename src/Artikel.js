@@ -2,7 +2,7 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import "./Components/style.css";
 import React from "react";
-import {Card, Button} from "react-bootstrap";
+import {Card} from "react-bootstrap";
 import {useState, useEffect} from "react";
 
 function Artikel() {
@@ -37,8 +37,7 @@ function Artikel() {
           DataResponse && DataResponse.map((item, index) => {
             return (
               
-              <div className='col-lg-3 col-md-6 col-sm-12'>
-                <Card className="card-beranda">
+                <Card className="card-artikel-berita">
                             <Card className='mt-4'>
                                 <Card.Img variant="top" src={item.image_file_data} />
                                 <Card.Body>
@@ -52,8 +51,7 @@ function Artikel() {
                                 </Card.Body>
                             </Card>
                             </Card>
-                        </div>
-            )
+           )
           })
         }
         </div>: ''

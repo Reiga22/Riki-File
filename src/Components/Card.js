@@ -1,6 +1,5 @@
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 import {useState, useEffect} from "react";
 import "./style.css";
 
@@ -45,7 +44,6 @@ function Kart() {
           DataResponse 
           && DataResponse.map((item, index) => {
             return (
-                        <div className='col-lg-3 col-md-6 col-sm-12'>
                           <Card className='card-beranda' >
                             <Card className='mt-4'>
                                 <Card.Img variant="top" src={item.image_file_data} />
@@ -60,7 +58,6 @@ function Kart() {
                                 </Card.Body>
                             </Card>
                             </Card>
-                        </div>
             )
           })
         }

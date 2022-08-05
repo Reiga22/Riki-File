@@ -1,8 +1,8 @@
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 import {useState, useEffect} from "react";
 import "./style.css";
+import { useParams } from 'react-router-dom';
 
 function Cardartikel() {
   const [DataResponse, setDataResponse] = useState(null);
@@ -14,9 +14,11 @@ function Cardartikel() {
     };
   }, []);
 
+
   function Cardartikel() {
     const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=5&per_page=4').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=5&per_page=4').then(function (response) {
+      
     setDataResponse(response.data.data.data);
     }).catch(function (error) {
 
@@ -24,6 +26,7 @@ function Cardartikel() {
 
     });
   }
+
 
   return (
     <>
@@ -45,22 +48,18 @@ function Cardartikel() {
           DataResponse 
           && DataResponse.map((item, index) => {
             return (
-                        <div className='col-lg-3 col-md-6 col-sm-12'>
                             <Card className='card-beranda'>
-                            <Card className='mt-4'>
                                 <Card.Img variant="top" src={item.image_file_data} />
                                 <Card.Body>
                                 <Card.Title>{item.title}</Card.Title>
                                 <Card.Text>
-                                        {item.content}
+                                        
                                 </Card.Text>
                                 <p className='read-more'>
-                                  <a href=''>Read More</a>
+                                  <a href='/artikel/Cardartikel/$item.id'>Read More</a>
                                 </p>                                
                                 </Card.Body>
                             </Card>
-                            </Card>
-                        </div>
             )
           })
         }

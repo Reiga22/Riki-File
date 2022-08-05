@@ -6,6 +6,7 @@ import Artikel from "./Artikel";
 import Galeri from "./Galeri";
 import Foto from "./Foto";
 import Vidio from "./Vidio";
+import Cardartikel from "./Components/Cardartikel";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Route path="/Galeri" element={<Galeri/>}/>
       <Route path="/Foto" element={<Foto/>}/>
       <Route path="/Vidio" element={<Vidio/>}/>
-
+      <Route path='/artikel/Cardartikel/:id' element={<Cardartikel />} />
 
     </Routes>
     </> 
