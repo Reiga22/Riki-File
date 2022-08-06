@@ -2,7 +2,6 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState, useEffect} from "react";
 import "./style.css";
-import { useParams } from 'react-router-dom';
 
 function Cardartikel() {
   const [DataResponse, setDataResponse] = useState(null);
@@ -27,7 +26,7 @@ function Cardartikel() {
     });
   }
 
-
+console.log(DataResponse)
   return (
     <>
    {
@@ -56,7 +55,7 @@ function Cardartikel() {
                                         
                                 </Card.Text>
                                 <p className='read-more'>
-                                  <a href='/artikel/Cardartikel/$item.id'>Read More</a>
+                                  <a href={`/ShowArtikel/${item.id}`}>Read More</a>
                                 </p>                                
                                 </Card.Body>
                             </Card>
@@ -68,7 +67,13 @@ function Cardartikel() {
             </div>
         </div>: ''
       }
-    
+    <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
+                  <a href="/Artikel">
+                    <h5>
+                      See More Artikel
+                    </h5>
+                  </a>
+                </div>    
     </>
   );
 };

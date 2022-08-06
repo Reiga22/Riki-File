@@ -35,9 +35,14 @@
 
 .card-artikel-berita{
     margin: 20px;
-    align-items: center;
+    justify-content: center;
     width: 40rem;
     height: auto;
+}
+
+.show-artikel{
+    position: relative;
+    width: 70%;
 }
 
 

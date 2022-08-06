@@ -6,9 +6,11 @@ import Artikel from "./Artikel";
 import Galeri from "./Galeri";
 import Foto from "./Foto";
 import Vidio from "./Vidio";
-import Cardartikel from "./Components/Cardartikel";
+import ShowArtikel from "./Components/ShowArtikel";
+import ShowBerita from "./Components/ShowBerita";
 
 function App() {
+  
   return (
     <>
     <Routes>
@@ -19,7 +21,8 @@ function App() {
       <Route path="/Galeri" element={<Galeri/>}/>
       <Route path="/Foto" element={<Foto/>}/>
       <Route path="/Vidio" element={<Vidio/>}/>
-      <Route path='/artikel/Cardartikel/:id' element={<Cardartikel />} />
+      <Route path='/ShowArtikel/:id' element={<ShowArtikel />} />
+      <Route path='/ShowBerita/:id' element={<ShowBerita/>} />
 
     </Routes>
     </> 

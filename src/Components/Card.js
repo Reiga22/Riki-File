@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState, useEffect} from "react";
 import "./style.css";
+import { Button } from 'react-bootstrap';
 
 function Kart() {
   const [DataResponse, setDataResponse] = useState(null);
@@ -24,6 +25,7 @@ function Kart() {
     });
   }
 
+  console.log(DataResponse)
   return (
     <>
    {
@@ -36,9 +38,9 @@ function Kart() {
                 <div className='sub col-lg-6  col-md-6 col-sm-6'>
                     <h2>BERITA</h2>
                 </div>
-                <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
+                <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'></div>
+             
                 
-                </div>
                 
         {
           DataResponse 
@@ -50,24 +52,35 @@ function Kart() {
                                 <Card.Body>
                                 <Card.Title>{item.title}</Card.Title>
                                 <Card.Text>
-                                        {item.content}
                                 </Card.Text>
                                 <p className='read-more'>
-                                  <a href=''>Read More</a>
+                                  <a href={`/ShowBerita/${item.id}`}>Read More</a>
                                 </p>
                                 </Card.Body>
                             </Card>
-                            </Card>
+                            
+                            </Card>  
+                            
+            
+
+                                                    
             )
           })
         }
+      
                 </div>
             </div>
             </div>
         </div>: ''
       }
-    
-    </>
+<div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
+                  <a href="/Berita">
+                    <h5>
+                      See More Berita
+                    </h5>
+                  </a>
+                </div>    
+                </>
   );
 };
 
