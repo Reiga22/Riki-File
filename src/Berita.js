@@ -1,8 +1,9 @@
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import "./Components/style.css";
+import "./berita-style.css";
 import React from "react";
-import {Card, Button} from "react-bootstrap";
+import Card from 'react-bootstrap/Card';
 import {useState, useEffect} from "react";
 
 function Berita() {
@@ -26,6 +27,7 @@ function Berita() {
     });
   }
 
+  console.log(DataResponse)
     return (
     <>
     <Header/>
@@ -33,6 +35,12 @@ function Berita() {
         (DataResponse != null) ? 
          
               <div className="row">
+                <div className="berita-halaman">
+                  <h1>Halaman Berita</h1>
+                  <br></br>
+                  <br></br>
+                </div>
+                
         {
           DataResponse && DataResponse.map((item, index) => {
             return (
@@ -43,10 +51,9 @@ function Berita() {
                                 <Card.Body>
                                 <Card.Title>{item.title}</Card.Title>
                                 <Card.Text>
-                                        {item.content}
                                 </Card.Text>
                                 <p className='read-more'>
-                                  <a href=''>Read More</a>
+                                  <a href={`/ShowBerita/${item.id}`}>Read More</a>
                                 </p>                                
                                 </Card.Body>
                             </Card>

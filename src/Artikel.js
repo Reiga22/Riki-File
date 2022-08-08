@@ -1,7 +1,7 @@
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import "./Components/style.css";
-import React from "react";
+import "./artikel-style.css";
 import {Card} from "react-bootstrap";
 import {useState, useEffect} from "react";
 
@@ -26,6 +26,7 @@ function Artikel() {
     });
   }
 
+  console.log(DataResponse)
     return (
     <>
     <Header/>
@@ -33,6 +34,11 @@ function Artikel() {
         (DataResponse != null) ? 
          
               <div className="row">
+                <div className="artikel-halaman">
+                  <h1>Halaman Artikel</h1>
+                  <br></br>
+                  <br></br>
+                </div>
         {
           DataResponse && DataResponse.map((item, index) => {
             return (
@@ -45,7 +51,7 @@ function Artikel() {
                                 <Card.Text>
                                 </Card.Text>
                                 <p className='read-more'>
-                                  <a href=''>Read More</a>
+                                  <a href={`ShowArtikel/${item.id}`}>Read More</a>
                                 </p>                                
                                 </Card.Body>
                             </Card>

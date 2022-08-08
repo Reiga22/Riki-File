@@ -2,7 +2,6 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState, useEffect} from "react";
 import "./style.css";
-import { Button } from 'react-bootstrap';
 
 function Kart() {
   const [DataResponse, setDataResponse] = useState(null);
