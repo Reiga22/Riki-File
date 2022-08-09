@@ -1,5 +1,4 @@
 import {Routes, Route} from "react-router-dom";
-import Profil from './Profil';
 import Beranda from "./Beranda";
 import Berita from "./Berita";
 import Artikel from "./Artikel";
@@ -8,6 +7,8 @@ import Foto from "./Foto";
 import Vidio from "./Vidio";
 import ShowArtikel from "./Components/ShowArtikel";
 import ShowBerita from "./Components/ShowBerita";
+import Dokumen from "./Dokumen";
+import ShowDokumen from "./Components/ShowDokumen";
 
 function App() {
   
@@ -15,7 +16,7 @@ function App() {
     <>
     <Routes>
       <Route path="/" element={<Beranda/>} />
-      <Route path="/Profil" element={<Profil/>} />
+      <Route path="/Dokumen" element={<Dokumen/>}/>
       <Route path="/Berita" element={<Berita/>}/>
       <Route path="/Artikel" element={<Artikel/>}/>
       <Route path="/Galeri" element={<Galeri/>}/>
@@ -23,6 +24,7 @@ function App() {
       <Route path="/Vidio" element={<Vidio/>}/>
       <Route path='/ShowArtikel/:id' element={<ShowArtikel />} />
       <Route path='/ShowBerita/:id' element={<ShowBerita/>} />
+      <Route path='/ShowDokumen/:id' element={<ShowDokumen/>}/>
 
     </Routes>
     </> 

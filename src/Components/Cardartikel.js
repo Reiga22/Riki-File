@@ -31,7 +31,7 @@ console.log(DataResponse)
     <>
    {
         (DataResponse != null) ?
-        <div>
+        <div className='card-artikel-all'>
           <div className="container-fluid mt-5">
             <div className="container">
            

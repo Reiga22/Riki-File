@@ -22,7 +22,7 @@ function Header() {
             <Nav.Link as={Link} to="/">Beranda</Nav.Link>
             <Nav.Link as={Link} to="/Berita">Berita</Nav.Link>
             <Nav.Link as={Link} to="/Artikel">Artikel</Nav.Link>
-            <Nav.Link as={Link} to="/Profil">Dokumen</Nav.Link>
+            <Nav.Link as={Link} to="/Dokumen">Dokumen</Nav.Link>
             <NavDropdown title="Galeri" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to='/Foto'>Foto</NavDropdown.Item>
               <NavDropdown.Item as={Link} to='/Vidio'>Vidio</NavDropdown.Item>

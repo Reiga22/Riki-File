@@ -29,7 +29,7 @@ function Kart() {
     <>
    {
         (DataResponse != null) ?
-        <div>
+        <div className='card-berita-all'>
           <div className="container-fluid mt-5">
             <div className="container">
            
@@ -45,6 +45,7 @@ function Kart() {
           DataResponse 
           && DataResponse.map((item, index) => {
             return (
+              
                           <Card className='card-beranda' >
                             <Card className='mt-4'>
                                 <Card.Img variant="top" src={item.image_file_data} />
@@ -56,29 +57,27 @@ function Kart() {
                                   <a href={`/ShowBerita/${item.id}`}>Read More</a>
                                 </p>
                                 </Card.Body>
-                            </Card>
-                            
+                            </Card>       
                             </Card>  
-                            
-            
-
-                                                    
+                                                                     
             )
           })
         }
-      
+
                 </div>
             </div>
             </div>
         </div>: ''
       }
+      <div>
 <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
                   <a href="/Berita">
                     <h5>
                       See More Berita
                     </h5>
                   </a>
-                </div>    
+                </div>  
+                </div>
                 </>
   );
 };
