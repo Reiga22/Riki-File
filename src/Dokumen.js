@@ -4,6 +4,7 @@ import "./Components/style.css";
 import "./berita-style.css";
 import React from "react";
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import {useState, useEffect} from "react";
 
 function Dokumen() {
@@ -47,11 +48,13 @@ function Dokumen() {
               <div className="bg container-fluid mt-5">
                 <div className="container">
                   <div className="row">
-                <Card className="card-dokumen">
+                <Card>
                     <Card>
                 <Card.Body>
                     <Card.Title>{index.dokumen_item[0].dokumen_file_name}</Card.Title>
-                    <Card.Title>{index.description}</Card.Title>             
+                    <Card.Text>{index.description}</Card.Text>  
+                    <Button variant="outline-success" href={`/ShowDokumen/${index.slug}`}>Read All..</Button>{' '}
+             
                 </Card.Body>
 
           </Card>

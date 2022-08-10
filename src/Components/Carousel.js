@@ -1,45 +1,54 @@
-import Carousel from 'react-bootstrap/Carousel';
+import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import { Carousel } from "react-bootstrap";
+import { useState, useEffect } from "react";
 
-function DarkVariantExample() {
-  return (
-    <Carousel variant="dark">
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://lampung.bpk.go.id/wp-content/uploads/2022/04/LKPD-4-2.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://netizenku.com/assets/uploads/2022/05/IMG-20220514-WA0002.jpg"
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://1.bp.blogspot.com/-GZVf94sBYw8/WdUlZDQfvLI/AAAAAAAADx8/l1LlverRt1saZIWSMy_7f9poTErAvq4ngCLcBGAs/s1600/Kabupaten%2BLampung%2BTimur%252C%2BLampung.jpg"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
-}
+function CarouselBerita() {
+    const [DataResponse, setDataResponse] = useState(null);
+    useEffect(() => {
+      getCarouselBerita();
+      return () => {
+        setDataResponse(null);
+      };
+    }, []);
+  
+    function getCarouselBerita() {
+      const axios = require("axios");
+      axios
+        .get("http://adminmesuji.embuncode.com/api/news?instansi_id=5&per_page=4")
+        .then(function(response) {
+          setDataResponse(response.data.data.data);
+        })
+        .catch(function(error) {})
+        .then(function() {});
+    }
+  
+    return (
+      <>
+        {DataResponse != null ? (
+          <Carousel variant="dark">
+            {DataResponse &&
+              DataResponse.map((item, index) => {
+                return (
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src={item.image_file_data}
+                      style={{ width: 500, height: 400 }}
+                      alt="First slide"
+                    />
+                    <Carousel.Caption>
+                      <h5 className="text-white">{item.title}</h5>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                );
+              })}
+          </Carousel>
+        ) : (
+          ""
+        )}
+      </>
+    );
+  };
 
-export default DarkVariantExample;
+export default CarouselBerita;

@@ -45,7 +45,7 @@ console.log(DataResponse)
                 
         {
           DataResponse 
-          && DataResponse.map((item, index) => {
+          && DataResponse.map((item) => {
             return (
                             <Card className='card-beranda'>
                                 <Card.Img variant="top" src={item.image_file_data} />
