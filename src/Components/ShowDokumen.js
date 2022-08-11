@@ -33,7 +33,8 @@ function ShowDokumen() {
             {
                 (DataShowDokumen != null) ?
                 <div className="container py-5 mt-5">
-                    <div>
+                    <div className='container'>
+                    <div className='row'>
                         <article>
                             {DataShowDokumen[0].description_dokumen}
                         </article>
@@ -47,6 +48,7 @@ function ShowDokumen() {
                             height="100%"
                             width="100%"
                         ></iframe>
+                    </div>
                     </div>
                 </div> : ''
             }

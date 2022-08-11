@@ -3,3 +3,10 @@
     background-color: aquamarine;
     padding-top: 50px;
 }
+
+.card-berita-halaman{
+    margin: 20px;
+    justify-content: center;
+    width: 30rem;
+    height: auto;
+}

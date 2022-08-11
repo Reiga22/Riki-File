@@ -34,13 +34,6 @@
     
 }
 
-.card-artikel-berita{
-    margin: 20px;
-    justify-content: center;
-    width: 40rem;
-    height: auto;
-}
-
 .show-artikel{
     position: relative;
     width: 70%;
@@ -55,11 +48,16 @@
 }
 
 .dokumen-card{
-    height: 600px;
-    width: 100px;
+    height: 650px;
+    width: 700px;
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+.detail-berita{
+    display: flex;
+    align-content: center;
 }
 
 

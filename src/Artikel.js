@@ -1,6 +1,5 @@
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import "./Components/style.css";
 import "./artikel-style.css";
 import {Card} from "react-bootstrap";
 import {useState, useEffect} from "react";
@@ -34,16 +33,19 @@ function Artikel() {
         (DataResponse != null) ? 
          
               <div className="row">
+                <div className="container">
                 <div className="artikel-halaman">
                   <h1>Halaman Artikel</h1>
                   <br></br>
-                  <br></br>
+                  <br></br>       
                 </div>
+                <br></br>
+                <div className="container">
+                  <div className="row">
         {
           DataResponse && DataResponse.map((item, index) => {
             return (
-              
-                <Card className="card-artikel-berita">
+              <Card className="card-artikel-berita">
                             <Card className='mt-4'>
                                 <Card.Img variant="top" src={item.image_file_data} />
                                 <Card.Body>
@@ -59,6 +61,9 @@ function Artikel() {
            )
           })
         }
+        </div>
+        </div>
+        </div>
         </div>: ''
       }
       <Footer/>

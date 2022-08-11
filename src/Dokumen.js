@@ -19,7 +19,7 @@ function Dokumen() {
 
   function Dokumen() {
     const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/dokumen?instansi_id=2').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/dokumen?instansi_id=8').then(function (response) {
     setDataResponse(response.data.data.data);
     }).catch(function (error) {
 
@@ -53,8 +53,7 @@ function Dokumen() {
                 <Card.Body>
                     <Card.Title>{index.dokumen_item[0].dokumen_file_name}</Card.Title>
                     <Card.Text>{index.description}</Card.Text>  
-                    <Button variant="outline-success" href={`/ShowDokumen/${index.slug}`}>Read All..</Button>{' '}
-             
+                    <Button variant="link" href={`/ShowDokumen/${index.slug}`}>Read More</Button>
                 </Card.Body>
 
           </Card>

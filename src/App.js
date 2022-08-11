@@ -9,6 +9,8 @@ import Vidio from "./Vidio";
 import ShowArtikel from "./Components/ShowArtikel";
 import ShowBerita from "./Components/ShowBerita";
 import ShowDokumen from "./Components/ShowDokumen";
+import ShowFoto from "./Components/ShowFoto";
+import ShowVidio from "./Components/ShowVidio";
 
 function App() {
   
@@ -25,6 +27,8 @@ function App() {
       <Route path='/ShowArtikel/:id' element={<ShowArtikel />} />
       <Route path='/ShowBerita/:id' element={<ShowBerita/>} />
       <Route path="/ShowDokumen/:slug" element={<ShowDokumen/>}/>
+      <Route path="/ShowFoto/:slug" element={<ShowFoto/>}/>
+      <Route path="/ShowVidio/:slug" element={<ShowVidio/>}/>
     </Routes>
     </> 
   );

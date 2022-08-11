@@ -35,22 +35,28 @@ function Berita() {
         (DataResponse != null) ? 
          
               <div className="row">
+                <div className="container">
                 <div className="berita-halaman">
                   <h1>Halaman Berita</h1>
                   <br></br>
                   <br></br>
                 </div>
+                <br></br>
+                <br></br>
+                <div className="container">
+                  <div className="row">
                 
         {
-          DataResponse && DataResponse.map((item, index) => {
+          DataResponse && DataResponse.map((item) => {
             return (
               
-                <Card className="card-artikel-berita">
+                <Card className="card-berita-halaman">
                             <Card className='mt-4'>
                                 <Card.Img variant="top" src={item.image_file_data} />
                                 <Card.Body>
                                 <Card.Title>{item.title}</Card.Title>
                                 <Card.Text>
+                                  {item.content}
                                 </Card.Text>
                                 <p className='read-more'>
                                   <a href={`/ShowBerita/${item.id}`}>Read More</a>
@@ -61,6 +67,9 @@ function Berita() {
             )
           })
         }
+        </div>
+        </div>
+        </div>
         </div>: ''
       }
       <Footer/>

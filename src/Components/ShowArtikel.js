@@ -32,7 +32,8 @@ function ShowArtikel() {
         <>
         <Header/>
         <div className="container-fluid mt-5">
-            <div className="container"></div>
+            <div className="container">
+              <div className='text-center'>
         <div className='show-artikel' >
         <h1>{id}</h1>
         <p>{DataShowArtikel.title}</p>
@@ -40,7 +41,8 @@ function ShowArtikel() {
         <p>{DataShowArtikel.content}</p>     
         </div>    
         </div>    
-
+        </div>
+        </div>
         <Footer/>
         </>
       );
