@@ -3,6 +3,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
+    <div className="sub col-lg-12  col-md-12 col-sm-12">
     <div className="main-footer">
       <div className="container">
         <div className="row">
@@ -16,33 +17,15 @@ function Footer() {
             </h1>
           </div>
           {/* Column2 */}
-          <div className="col">
-            <h4>YAHUHUHUHUHUHU</h4>
-            <ui className="list-unstyled">
-              <li>BAKSO</li>
-              <li>BAKSO</li>
-              <li>BAKSO</li>
-              <li>BAKSO</li>
-              <li>BAKSO</li>
-              <li>BAKSO</li>
-              <li>BAKSO</li>
-              <li>BAKSO</li>
-              <li>BAKSO</li>
-            </ui>
-          </div>
+          
           {/* Column3 */}
           <div className="col">
-            <h4>YAHAHAHAHAHAHA</h4>
+            <h4>Tentang Kami</h4>
             <ui className="list-unstyled">
-              <li>GORENG</li>
-              <li>GORENG</li>
-              <li>GORENG</li>
-              <li>GORENG</li>
-              <li>GORENG</li>
-              <li>GORENG</li>
-              <li>GORENG</li>
-              <li>GORENG</li>
-              <li>GORENG</li>
+              <li>“Tentang Kami”, atau dalam Bahasa Inggris biasa dengan “About Us”, 
+                merupakan halaman pada website yang menjelaskan tentang latar belakang perusahaan
+                 atau bisnis dari sebuah brand. Pada halaman ini biasanya dijelaskan awal mula bisnis 
+                 berdiri hingga bagaimana struktur organisasi pada bisnis tersebut.</li>
             </ui>
           </div>
         </div>
@@ -53,6 +36,7 @@ function Footer() {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 }

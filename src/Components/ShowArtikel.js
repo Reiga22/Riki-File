@@ -31,18 +31,31 @@ function ShowArtikel() {
     return (
         <>
         <Header/>
-        <div className="container-fluid mt-5">
-            <div className="container">
-              <div className='text-center'>
-        <div className='show-artikel' >
-        <h1>{id}</h1>
-        <p>{DataShowArtikel.title}</p>
-        <img src={DataShowArtikel.image_file_data}></img>
-        <p>{DataShowArtikel.content}</p>     
-        </div>    
-        </div>    
-        </div>
-        </div>
+        <div className="container-fluid py-5">
+          <div className="container">
+            <div className="row">
+            <div className='text-center'>
+              <div className="col-12">
+                <div className='font-judul'>
+                  <h1>
+                      {DataShowArtikel.title}
+                  </h1>
+                    </div>
+                   
+                      <img className='mt-5'
+                          src={DataShowArtikel.image_file_data}>
+                      </img>
+                    </div>
+                      <p className='font-isi mt-5 mb-5'>
+                        {DataShowArtikel.content}
+                      </p>
+                  </div>
+                </div>
+                <div>
+               
+            </div>
+          </div>
+        </div>  
         <Footer/>
         </>
       );

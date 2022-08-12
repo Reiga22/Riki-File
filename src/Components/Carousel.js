@@ -31,6 +31,7 @@ function CarouselBerita() {
               DataResponse.map((item, index) => {
                 return (
                   <Carousel.Item>
+                    <a href={`/ShowBerita/${item.id}`} >
                     <img
                       className="d-block w-100"
                       src={item.image_file_data}
@@ -40,7 +41,9 @@ function CarouselBerita() {
                     <Carousel.Caption>
                       <h5 className="text-white">{item.title}</h5>
                     </Carousel.Caption>
+                    </a>
                   </Carousel.Item>
+                  
                 );
               })}
           </Carousel>

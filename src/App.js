@@ -11,6 +11,7 @@ import ShowBerita from "./Components/ShowBerita";
 import ShowDokumen from "./Components/ShowDokumen";
 import ShowFoto from "./Components/ShowFoto";
 import ShowVidio from "./Components/ShowVidio";
+import HalamanStatis from "./HalamanStatis";
 
 function App() {
   
@@ -29,6 +30,7 @@ function App() {
       <Route path="/ShowDokumen/:slug" element={<ShowDokumen/>}/>
       <Route path="/ShowFoto/:slug" element={<ShowFoto/>}/>
       <Route path="/ShowVidio/:slug" element={<ShowVidio/>}/>
+      <Route path="/HalamanStatis" element={<HalamanStatis/>}/>
     </Routes>
     </> 
   );

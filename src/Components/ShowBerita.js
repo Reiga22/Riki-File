@@ -4,6 +4,8 @@ import './style.css';
 import Footer from './Footer';
 import Header from './Header';
 
+
+
 function ShowBerita() {
     const [DataShowBerita, setDataShowBerita] = useState([]);
     const { id } = useParams();
@@ -11,9 +13,6 @@ function ShowBerita() {
 
     useEffect(() => {
         getShowBerita();
-        //return () => {
-        //    setDataShowArtikel(null);
-        //}
       }, [])
 
       function getShowBerita(){
@@ -32,20 +31,31 @@ function ShowBerita() {
     return (
         <>
         <Header/>
-        <div className='detail-berita'>
-        <div className="container-fluid mt-6">
-          <div className='container'>
-            <div className="text-center">
-        <div className='show-artikel' >
-        <h1>{id}</h1>
-        <p>{DataShowBerita.title}</p>
-        <img src={DataShowBerita.image_file_data}></img>
-        <p className='text-center'>{DataShowBerita.content}</p>     
-        </div>    
+        <div className="container-fluid py-5">
+          <div className="container">
+            <div className="row">
+            <div className='text-center'>
+              <div className="col-12">
+                <div className='font-judul'>
+                  <h1>
+                      {DataShowBerita.title}
+                  </h1>
+                    </div>
+                   
+                      <img className='mt-5'
+                          src={DataShowBerita.image_file_data}>
+                      </img>
+                    </div>
+                      <p className='font-isi mt-5 mb-5'>
+                        {DataShowBerita.content}
+                      </p>
+                  </div>
+                </div>
+                <div>
+               
+            </div>
+          </div>
         </div>  
-        </div>  
-        </div>
-        </div>
         <Footer/>
         </>
       );

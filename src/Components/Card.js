@@ -70,7 +70,7 @@ function Kart() {
         </div>: ''
       }
       <div>
-<div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
+<div className='sub col-lg-12  col-md-12 col-sm-12 text-center'>
                   <a href="/Berita">
                     <h5>
                       See More Berita

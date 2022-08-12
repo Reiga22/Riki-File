@@ -67,7 +67,7 @@ console.log(DataResponse)
             </div>
         </div>: ''
       }
-    <div className='sub col-lg-6  col-md-6 col-sm-6 text-end'>
+    <div className='sub col-lg-12  col-md-12 col-sm-12 text-center'>
                   <a href="/Artikel">
                     <h5>
                       See More Artikel

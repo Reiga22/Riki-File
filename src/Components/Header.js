@@ -7,7 +7,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function Header() {
   return (
     <>
-     <Navbar bg="light" variant="light">
+    <Navbar bg="light" variant="light" expand="lg">
+     <Navbar bg="light" variant="light" expand="lg">
         <Container>
         <Navbar.Brand>
           <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png" width={70} height={60}></img>
@@ -15,7 +16,7 @@ function Header() {
         </Navbar.Brand>
         </Container>
       </Navbar>
-     <Navbar bg="dark" variant="dark">
+     <Navbar bg="light" variant="light" expand="lg">
         <Container>
           <Nav className="me-auto">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -27,8 +28,10 @@ function Header() {
               <NavDropdown.Item as={Link} to='/Foto'>Foto</NavDropdown.Item>
               <NavDropdown.Item as={Link} to='/Vidio'>Vidio</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} to="/HalamanStatis">Halaman Statis</Nav.Link>
           </Nav>
         </Container>
+      </Navbar>
       </Navbar>
     </>
     );
