@@ -46,9 +46,11 @@ function ShowBerita() {
                           src={DataShowBerita.image_file_data}>
                       </img>
                     </div>
+                    <div className='text-berita'>
                       <p className='font-isi mt-5 mb-5'>
                         {DataShowBerita.content}
                       </p>
+                      </div>
                   </div>
                 </div>
                 <div>

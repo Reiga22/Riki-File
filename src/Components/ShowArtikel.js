@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom";
+import './style.css';
 import Footer from './Footer';
 import Header from './Header';
 
@@ -41,14 +42,15 @@ function ShowArtikel() {
                       {DataShowArtikel.title}
                   </h1>
                     </div>
-                   
                       <img className='mt-5'
                           src={DataShowArtikel.image_file_data}>
                       </img>
                     </div>
+                    <div className='text-artikel'>
                       <p className='font-isi mt-5 mb-5'>
                         {DataShowArtikel.content}
                       </p>
+                      </div>
                   </div>
                 </div>
                 <div>

@@ -50,8 +50,7 @@
 .dokumen-card{
     height: 650px;
     width: 700px;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     display: flex;
 }
 
@@ -63,6 +62,15 @@
 .show-berita{
     text-align: justify;
 }
+
+.text-artikel{
+    text-align: justify;
+}
+
+.text-berita{
+    text-align: justify;
+}
+
 
 
 
