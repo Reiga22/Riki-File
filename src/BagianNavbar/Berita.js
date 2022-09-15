@@ -1,6 +1,6 @@
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-import './css/berita-style.css';
+import './css/artikel-style.css';
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import {useState, useEffect} from "react";
@@ -33,31 +33,37 @@ function Berita() {
       {
         (DataResponse != null) ? 
          
-        <div className='card-berita-all'>
-          <div className="berita-halaman">
+        <div className='card-artikel-all'>
+          <div className="artikel-halaman">
             <h1>Halaman Berita</h1>
           </div>
-          <div className="container">        
-            <div className="row">      
+        <div className="container-fluid mt-5">
+          <div className="container">
+         
+            <div className="row">
+              
+              
+                
         {
           DataResponse && DataResponse.map((item) => {
             return (
               <div className='card-beranda' >
-                            <Card className='pembungkus'>
-                                <Card.Img  className='img-news'variant="top" src={item.image_file_data} />
-                                <Card.Body>
-                                <Card.Title className='title'>{item.title}</Card.Title>
-                                <Card.Text>
-                                </Card.Text>
-                                <p className='read-more'>
-                                  <a href={`/ShowBerita/${item.id}`}>Read More</a>
-                                </p>
-                                </Card.Body>
-                            </Card>       
-                            </div>  
+                             <Card className='pembungkus'>
+                                 <Card.Img  className='img-article'variant="top" src={item.image_file_data} />
+                                 <Card.Body>
+                                 <Card.Title className='title'>{item.title}</Card.Title>
+                                 <Card.Text>
+                                 </Card.Text>
+                                 <p className='read-more'>
+                                   <a href={`/ShowBerita/${item.id}`}>Read More</a>
+                                 </p>
+                                 </Card.Body>
+                             </Card>       
+                             </div> 
            )
           })
         }
+        </div>
         </div>
             </div>
         </div>: ''

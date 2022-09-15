@@ -5,7 +5,7 @@ import React from "react";
 import Card from 'react-bootstrap/Card';
 import {useState, useEffect} from "react";
 
-function Berita() {
+function Artikel() {
   const [DataResponse, setDataResponse] = useState(null);
 
   useEffect(() => {
@@ -74,4 +74,4 @@ function Berita() {
   
 }
 
-export default Berita;
+export default Artikel;

@@ -1,10 +1,8 @@
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
-import React from "react";
 import './css/vidio.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {useState, useEffect} from "react";
+import React from "react";
 
 const Vidio = () => {
   const [DataResponse, setDataResponse] = useState(null);

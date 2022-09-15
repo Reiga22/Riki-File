@@ -1,8 +1,8 @@
-import React from "react";
 import './css/foto.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {useState, useEffect} from "react";
+import React from "react";
 
 const Foto = () => {
   const [DataResponse, setDataResponse] = useState(null);

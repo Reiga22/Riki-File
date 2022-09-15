@@ -1,6 +1,6 @@
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-import "./css/berita-style.css";
+import "./css/dokumen-style.css";
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';

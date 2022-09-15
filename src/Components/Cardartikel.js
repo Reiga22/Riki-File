@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState, useEffect} from "react";
 import './css/cardartikel.css';
+import React from "react";
 
 function Cardartikel() {
   const [DataResponse, setDataResponse] = useState(null);

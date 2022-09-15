@@ -12,6 +12,7 @@ import HalamanStatis from "./BagianNavbar/HalamanStatis";
 import ShowArtikel from "./Detail/ShowArtikel";
 import ShowBerita from "./Detail/ShowBerita";
 import ShowDokumen from "./Detail/ShowDokumen";
+import React from "react";
 
 function App() {
   

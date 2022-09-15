@@ -5,6 +5,7 @@ import './css/header.css';
 import mesuji from './image/mesuji.png';
 import {Link} from "react-router-dom";
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from "react";
 
 function Header() {
   return (
@@ -12,7 +13,7 @@ function Header() {
       <div className='nav container'>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <img 
-        src={mesuji.jpg}
+        src={mesuji}
          width={65}
          height={65}>
         </img>

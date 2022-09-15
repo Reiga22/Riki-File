@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
 import { Carousel } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import React from "react";
 
 function CarouselBerita() {
     const [DataResponse, setDataResponse] = useState(null);
