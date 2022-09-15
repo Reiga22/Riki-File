@@ -1,0 +1,20 @@
+.card-vidio{
+    margin: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+}
+
+.pembungkus{
+    height: 350px;
+}
+
+.img-vidio{
+    width: 274px;
+    height: 200px;
+}
+
+.see-more{
+    text-align: center;
+}

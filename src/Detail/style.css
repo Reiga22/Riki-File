@@ -1,0 +1,60 @@
+.card:hover{
+    transform: scale(0.98);
+    box-shadow: 25px 50px #0000;
+}
+
+
+.image{
+    width: 300px;
+    height: 300px;
+}
+
+.card-beranda{
+    margin: 20px;
+    align-items: center;
+    width: 18rem;
+    height: auto;
+    
+}
+
+.show-artikel{
+    position: relative;
+    width: 70%;
+}
+
+.card-berita-all{
+    background-color: whitesmoke;
+}
+
+.dokumen-card{
+    height: 650px;
+    width: 700px;
+    text-align: center;
+    display: flex;
+}
+
+.detail-berita{
+    display: flex;
+    align-content: center;
+}
+
+.show-berita{
+    text-align: justify;
+}
+
+.text-artikel{
+    text-align: justify;
+}
+
+.text-berita{
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+

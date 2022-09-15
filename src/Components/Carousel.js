@@ -35,7 +35,7 @@ function CarouselBerita() {
                     <img
                       className="d-block w-100"
                       src={item.image_file_data}
-                      style={{ width: 500, height: 400 }}
+                      style={{ width: 500, height: 500 }}
                       alt="First slide"
                     />
                     <Carousel.Caption>

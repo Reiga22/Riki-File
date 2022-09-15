@@ -1,21 +1,23 @@
+import Footer from "../Components/Footer";
+import Header from "../Components/Header";
+import './css/berita-style.css';
+import React from "react";
 import Card from 'react-bootstrap/Card';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState, useEffect} from "react";
-import './css/card.css';
 
-function Kart() {
+function Berita() {
   const [DataResponse, setDataResponse] = useState(null);
 
   useEffect(() => {
-    Kart();
+    Berita();
     return () => {
       setDataResponse(null);
     };
   }, []);
 
-  function Kart() {
+  function Berita() {
     const axios = require('axios');
-    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=44&per_page=3').then(function (response) {
+    axios.get('http://adminmesuji.embuncode.com/api/news?instansi_id=7&per_page=6').then(function (response) {
     setDataResponse(response.data.data.data);
     }).catch(function (error) {
 
@@ -25,55 +27,45 @@ function Kart() {
   }
 
   console.log(DataResponse)
-  return (
+    return (
     <>
-   {
-        (DataResponse != null) ?
+    <Header/>
+      {
+        (DataResponse != null) ? 
+         
         <div className='card-berita-all'>
-          <div className="container-fluid mt-5">
-            <div className="container">
-           
-              <div className="row">
-                <div className='berita'>
-                    <h2>BERITA TERBARU</h2>
-                    </div>
-                
-                
+          <div className="berita-halaman">
+            <h1>Halaman Berita</h1>
+          </div>
+          <div className="container">        
+            <div className="row">      
         {
-          DataResponse 
-          && DataResponse.map((item) => {
+          DataResponse && DataResponse.map((item) => {
             return (
-              
-                          <div className='card-beranda' >
+              <div className='card-beranda' >
                             <Card className='pembungkus'>
                                 <Card.Img  className='img-news'variant="top" src={item.image_file_data} />
                                 <Card.Body>
                                 <Card.Title className='title'>{item.title}</Card.Title>
+                                <Card.Text>
+                                </Card.Text>
                                 <p className='read-more'>
                                   <a href={`/ShowBerita/${item.id}`}>Read More</a>
                                 </p>
                                 </Card.Body>
                             </Card>       
                             </div>  
-                                                                     
-            )
+           )
           })
         }
-
-                </div>
-            </div>
+        </div>
             </div>
         </div>: ''
       }
-<div className='see-more'>
-                  <a href="/Berita">
-                    <h5>
-                      See More Berita
-                    </h5>
-                  </a>
-                </div>  
-                </>
+      <Footer/>
+      </>
   );
-};
+  
+}
 
-export default Kart;
+export default Berita;

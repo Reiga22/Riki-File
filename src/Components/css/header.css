@@ -1,0 +1,14 @@
+.nav{
+    font-size: large;
+    padding: 14px 16px;
+}
+
+.effect{
+    display: block;
+    text-decoration: none;
+}
+
+.effect:hover:not(.active) {
+  background-color: aliceblue;
+}
+

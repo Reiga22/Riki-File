@@ -1,0 +1,48 @@
+.card:hover{
+    transform: scale(0.98);
+    box-shadow: 25px 50px #0000;
+}
+
+.card-beranda{
+    margin: 20px;
+    align-items: center;
+    width: 18rem;
+    height: auto;
+    
+}
+
+.img-article{
+    width: 262px;
+    height: 200px;
+}
+
+.title{
+    text-align: center;
+}
+
+.read-more{
+    text-align: center;
+}
+
+.pembungkus{
+    height: 350px;
+}
+
+.berita{
+    text-align: center;
+    background-color: aquamarine;
+}
+
+.see-more{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+

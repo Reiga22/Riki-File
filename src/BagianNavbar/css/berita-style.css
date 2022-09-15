@@ -1,0 +1,17 @@
+
+
+.img{
+    width: 300px;
+    height: 200px;
+}
+
+.intro{
+    text-align: justify;
+}
+
+.berita-halaman{
+    height: 130px;
+    text-align: center;
+    background-color: aquamarine;
+    padding-top: 40px;
+}

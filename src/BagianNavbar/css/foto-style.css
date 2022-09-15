@@ -1,0 +1,16 @@
+.card-foto{
+    margin: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+}
+
+.pembungkus{
+    height: 350px;
+}
+
+.img-foto{
+    width: 274px;
+    height: 200px;
+}
