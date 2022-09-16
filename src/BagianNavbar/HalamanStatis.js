@@ -1,42 +1,59 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-import './css/halaman-statis.css';
-import { useState, useEffect } from "react";
 import Header from "../Components/Header";
+import { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
 import Footer from "../Components/Footer";
 
-
 const HalamanStatis = () => {
-  const [DataResponse, setDataResponse] = useState(null);
+  const [GetData, SetData] = useState(null);
   useEffect(() => {
-    getStatis();
+    getStatic();
     return () => {
-      setDataResponse(null);
+      SetData(null);
     };
   }, []);
-
-  function getStatis() {
+  function getStatic() {
     const axios = require("axios");
     axios
-      .get(process.env.REACT_APP_STATIS)
-      .then(function(response) {
-        setDataResponse(response.data.data.data);
+      .get('http://adminmesuji.embuncode.com/api/static-page?instansi_id=43')
+      .then(function (response) {
+        SetData(response.data.data.items);
       })
-      .catch(function(error) {})
-      .then(function() {});
+      .catch(function (error) {})
+      .then(function () {});
   }
-
+  console.log(GetData);
   return (
     <>
     <Header/>
-      <div className="body">
-
-
-        <div className="judul">Halaman Statis</div>
-        <Container></Container>
-        <div>
-        </div>
-      </div>
+      {GetData != null ? (
+        <Container>
+          <div style={{paddingBottom:"300px"}}>
+            {GetData &&
+              GetData.map((item) => {
+                return (
+                  <>
+                    <h2
+                      style={{
+                        textAlign: "center",
+                        paddingTop: "40px",
+                        width: "100%",
+                        borderBottom: "solid 5px",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      Halaman Statis
+                    </h2>
+                    <h3 style={{textAlign:"center"}}>{item.title}</h3>
+                    <p style={{textAlign:"justify"}}>{item.content}</p>
+                  </>
+                );
+              })}
+          </div>
+        </Container>
+      ) : (
+        ""
+      )}
       <Footer/>
     </>
   );

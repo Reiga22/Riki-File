@@ -6,7 +6,7 @@ import Cardartikel from './Components/Cardartikel';
 import Carousel from './Components/Carousel';
 import Foto from './Components/Foto';
 import Vidio from './Components/Vidio';
-import React from "react";
+import React from 'react';
 
 function Beranda() {
   return (
